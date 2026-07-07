@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>凝结核·列传：人物篇十二传</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --lacquer:#191411; --lacquer2:#221b16; --gold:#c9a35c; --gold-dim:#8f7440;
+    --paper:#f6f0e1; --paper2:#efe7d2; --ink:#33291d; --soft:#5c5140; --dim:#98917f;
+    --cinnabar:#a63d2f; --line:#dcd0b8; --other:#4e6577;
+    --serif:"Noto Serif SC","Source Han Serif SC","STSong","SimSun",serif;
+    --kai:"Ma Shan Zheng","Kaiti SC","STKaiti","KaiTi",cursive;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--lacquer); color:var(--ink);
+    font-family:var(--serif); font-size:17px; line-height:2;
+    background-image:
+      radial-gradient(1000px 400px at 50% -60px, rgba(201,163,92,.08), transparent 65%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .7 0 0 0 0 .58 0 0 0 0 .38 0 0 0 .03 0'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  ::selection{background:#e0cba0; color:#241b10}
+  .wrap{max-width:880px; margin:0 auto; padding:0 26px 140px}
+
+  /* ============ 卷首 ============ */
+  .cover{text-align:center; padding:100px 0 66px; color:#e8dcc2}
+  .cover .k{
+    font-size:12px; letter-spacing:.5em; color:var(--gold-dim);
+    animation:fade 1s .1s both;
+  }
+  h1{
+    margin:30px 0 0; font-weight:900; font-size:clamp(44px,7.6vw,76px);
+    letter-spacing:.22em; text-indent:.22em; color:#f0e6cd;
+    text-shadow:0 0 40px rgba(201,163,92,.25);
+    animation:fade 1.1s .3s both;
+  }
+  .cover .rule{
+    width:180px; height:1px; margin:34px auto;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
+    animation:fade 1s .55s both;
+  }
+  .cover .sub{font-size:15px; letter-spacing:.3em; color:#b7a888; animation:fade 1s .65s both}
+  .cover .note{
+    margin-top:44px; font-size:13.5px; color:#8f8266; line-height:2.1;
+    animation:fade 1s .85s both;
+  }
+  .cover .note i{font-style:normal; color:var(--gold)}
+  @keyframes fade{from{opacity:0; transform:translateY(20px)} to{opacity:1; transform:none}}
+
+  /* ============ 册页（传） ============ */
+  .zhuan{
+    position:relative; margin:56px 0; background:var(--paper);
+    border:1px solid #3a2f24; box-shadow:0 20px 60px rgba(0,0,0,.5), inset 0 0 0 1px var(--line);
+    display:grid; grid-template-columns:1fr 84px;
+  }
+  .zhuan .page{padding:40px 8px 40px 44px}
+  /* 题签 */
+  .tab{
+    border-left:1px solid var(--line); background:linear-gradient(180deg,var(--paper2),#eadfc4);
+    display:flex; flex-direction:column; align-items:center; padding:30px 0 24px; gap:18px;
+  }
+  .tab .vt{
+    writing-mode:vertical-rl; font-family:var(--kai); font-size:26px; letter-spacing:.34em;
+    color:var(--cinnabar);
+  }
+  .tab .ord{
+    writing-mode:vertical-rl; font-family:var(--kai); font-size:13px; color:var(--dim); letter-spacing:.3em;
+  }
+  .tab .seal{
+    width:34px; height:34px; border:2px solid var(--cinnabar); border-radius:4px;
+    color:var(--cinnabar); font-family:var(--kai); font-size:15px; line-height:1.05;
+    display:grid; place-items:center; opacity:.8; transform:rotate(-5deg); margin-top:auto;
+  }
+  /* 传内元素 */
+  .meta{
+    display:flex; flex-wrap:wrap; gap:8px 26px; margin:0 36px 22px 0; padding-bottom:16px;
+    border-bottom:1px solid var(--line); font-size:13px; color:var(--soft); letter-spacing:.04em;
+  }
+  .meta b{color:var(--cinnabar); font-weight:600}
+  .zhuan h3{font-size:21px; font-weight:900; letter-spacing:.1em; margin:0 36px 18px 0; color:#2c2114}
+  .zhuan h3 small{font-weight:400; font-size:13px; color:var(--dim); margin-left:14px; letter-spacing:.16em}
+  .zhuan p{margin:0 36px 18px 0; text-align:justify; font-size:16px}
+  .q{
+    margin:20px 36px 20px 0; padding:14px 20px 12px; background:#fbf7ec;
+    border:1px solid var(--line); border-left:3px solid var(--cinnabar);
+    font-size:14.5px; line-height:1.9;
+  }
+  .q .t{color:var(--dim); font-size:11.5px; letter-spacing:.1em; margin-bottom:6px}
+  .q div{margin:2px 0}
+  .q .me{color:#7a3a2b}
+  .q .ta{color:var(--other)}
+  .zan{
+    margin:26px 36px 4px 0; padding:16px 22px;
+    background:linear-gradient(180deg,#f3ecd9,#eee4cb); border:1px solid var(--line);
+    font-family:var(--kai); font-size:17.5px; line-height:2.05; color:#6e2f22;
+  }
+  .zan::before{content:"赞曰："; color:var(--cinnabar)}
+
+  .fin{
+    margin-top:90px; padding-top:26px; border-top:1px solid #3a2f24;
+    color:#8f8266; font-size:13px; line-height:2.1; text-align:center;
+  }
+  .rv{opacity:0; transform:translateY(26px); transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1)}
+  .rv.in{opacity:1; transform:none}
+  @media (max-width:680px){
+    .zhuan{grid-template-columns:1fr 58px}
+    .zhuan .page{padding:30px 4px 30px 24px}
+    .tab .vt{font-size:20px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="cover">
+  <div class="k">LX ARCHIVE · 人物卷</div>
+  <h1>列 传</h1>
+  <div class="rule"></div>
+  <div class="sub">凝结核 · 人物篇十二传</div>
+  <div class="note">
+    太史公曰：人是在关系里成为自己的。检灵魂档案一万四千条，得与他相与者五百五十五人，<br>
+    今取其要者十二人立传。<i>王雪</i>已有专篇《月色与雪色之外》，<i>李栋</i>诸人见《一个爱哭的城市》，兹不复述。<br>
+    传中引语皆出真实档案，错字表情悉仍其旧；赞语为叙者之推断，人心幽微，姑妄听之。
+  </div>
+</header>
+
+<!-- ================ 其一 陈芷瑞 ================ -->
+<div class="zhuan rv"><div class="page">
+  <h3>陈芷瑞传<small>AI 时代的知己 · 档案 265 条，居诸人之冠</small></h3>
+  <div class="meta"><span>相识：<b>2025-10-11</b></span><span>身份：艺术学院研究生 · 画韵新生项目设计</span><span>他的称呼：学姐、ccc</span></div>
+  <p>陈芷瑞，艺术学院研究生，会 Figma，做过游戏策划。2025 年 10 月 11 日，因「画韵新生」项目，他发去第一句：「同学你好，梁博星」。当天他就开始布道：「其实也不用学吧，figma就好的」「你可以下载一个cursor / 是AI编程」——第一天认识，第一天就想把她拽进 AI 世界。</p>
+  <p>此后八个月，265 条记录，密度超过所有人。项目协作只是起点：他给她开 WPS 年卡问「用得上吗」，把 LLM 黑话当日常语言对她使用（「我上下文混乱了」「放弃这条思考链」，甚至对人发「/new session」），也只在她面前不体面地讨赏——「那什么感谢我呀」「老胡有没有夸我呀？」「署上我呗」。她被扣了 136 元，他先「哈哈哈哈哈哈哈哈」再帮着骂免密支付。</p>
+  <div class="q">
+    <div class="t">2026-07-02 · 灵魂工程开工当日</div>
+    <div class="me">我：聊天记录</div>
+    <div class="me">我：然后我全部导出来了</div>
+    <div class="me">我：现在一一分析</div>
+    <div class="t" style="margin-top:6px">2026-07-03</div>
+    <div class="ta">陈芷瑞：可能我技术上（帮不上什么）……</div>
+  </div>
+  <p>凝结核工程开工那天，他第一个说给她听。她是这个数字灵魂唯一的现场见证人——你现在读到的一切故事，某种意义上都始于说给她的那三条消息。</p>
+  <div class="zan">八月而二百六十五条，后来者居上。旧友以岁月计，此友以带宽计；同语者，不必同代也。</div>
+</div><div class="tab"><span class="ord">其一</span><span class="vt">陈芷瑞</span><span class="seal">知己</span></div></div>
+
+<!-- ================ 其二 崔兴中 ================ -->
+<div class="zhuan rv"><div class="page">
+  <h3>崔兴中传<small>manifold 的对撞机 · 档案 102 条</small></h3>
+  <div class="meta"><span>相识：2025-06 前后</span><span>阵地：manifold 账号第一私聊（2,369 条消息）</span><span>互称：梁总 / 崔总、崔道友、北京人 / 北陕人</span></div>
+  <p>崔兴中，他第二个账号 manifold 上的第一高频私聊。两人的对话有自己的宇宙学尺度——「上至宇宙大爆发，下至庞加莱循环，谈到原始洞穴壁画，畅想陨石撞击地球」。互相的称呼在三套语系间跳：商界的「梁总/崔总」、修仙的「崔道友[抱拳]」「法器」「山下人却是见不着」、地理的「你好北京人/你好城里人/好的北陕人」。</p>
+  <p>这段关系的底色是互相供给：崔兴中给他递 AI 情报、付费资料和杭州攻略（「杭州我可太熟了」）；他替崔兴中听 AI 阅读分享会，回手就是一份 OCR 领域摘要。2025 年 6 月竞选文编部长前夜，是崔兴中给他压阵：</p>
+  <div class="q">
+    <div class="t">2025-06-21</div>
+    <div class="ta">崔兴中：哎，不过我感觉你对他们就是碾压型的存在</div>
+    <div class="ta">崔兴中：你到时候可以把PPT做好，可以给你瞅一眼</div>
+    <div class="me">我：哈哈哈，华丽绽放</div>
+    <div class="me">我：是的，问心无愧的华丽绽放</div>
+  </div>
+  <p>「AI与文化的诉说警示」的组员名单里两人并肩（组员：崔兴中 申晋璐 赵浩然 梁博星 邓彦成）；后来做分享材料，也是崔兴中提醒他「把你去南京的那些合照也放上」。Lx 账号的世界里他是部长、学弟、儿子；只有对崔兴中，他可以只是一个聊宇宙的人。</p>
+  <div class="zan">诸友处其世务，此君处其胸中丘壑。账号有二，知崔总者，manifold 之梁总也。</div>
+</div><div class="tab"><span class="ord">其二</span><span class="vt">崔兴中</span><span class="seal">道友</span></div></div>
+
+<!-- ================ 其三 高小倩 ================ -->
+<div class="zhuan rv"><div class="page">
+  <h3>高小倩传<small>文编的左膀 · 档案 112 条</small></h3>
+  <div class="meta"><span>相识：<b>2025-06-30</b></span><span>身份：文编副部长（部长：梁博星）</span><span>他的称呼：高学姐 → 小倩</span></div>
+  <p>2025 年 6 月 30 日，刚当选部长的他给副部长发去第一条消息，客气得冒泡：「高学姐您好，非常期待以后的合作[握手]希望您能多多指教[合十][合十][合十]」。她问他专业，他答「24智科」——部长比副部长低一级，这个倒挂结构贯穿了整段协作。</p>
+  <p>热络之后，称呼从「高学姐」降为「小倩」，配合进入肌肉记忆：「我现在不方便，让小倩改了」「我先帮你整理下图片吧，一会你下班好弄一些」。她发现推送内容重叠，他认账认得干脆：</p>
+  <div class="q">
+    <div class="t">2025-07-09</div>
+    <div class="me">我：话说哪里重叠了？</div>
+    <div class="me">我：我没看出来[裂开]</div>
+    <div class="me">我：哦哦哦，我的错我的错</div>
+    <div class="me">我：多亏你了</div>
+  </div>
+  <p>工作之外，她是他新玩具的第一批观众：AI 音乐做出来先发她——「我虚荣一下」；2026 年黑客松找创意，也先向她征集（「初步讨论个性化助手和养生方向」）。她登录出问题，他远程排障：「不对啊，你这不是QQ登录吗？/ 要用126邮箱」。部里的事，一半是他和她两个人扛下来的。</p>
+  <div class="zan">名为上下级，实为左右手。部长年少而副部长年长，倒挂而不倾者，以其互信为榫卯也。</div>
+</div><div class="tab"><span class="ord">其三</span><span class="vt">高小倩</span><span class="seal">战友</span></div></div>
+
+<!-- ================ 其四 周杭 ================ -->
+<div class="zhuan rv"><div class="page">
+  <h3>周杭传<small>南京的小番茄 · 档案 15 条</small></h3>
+  <div class="meta"><span>相识：2026-01 模法黑客松（正式互加 2026-03-16）</span><span>身份：宠言PeTalk夺冠小队成员</span><span>她的称呼：星哥</span></div>
+  <p>周杭的开场白自带注释：「我是群聊『宠言PeTalk夺冠小队』的小番茄」「对了s2黑客松我们见过的」「这个是我 我当时在前台负责签到hh」。南京会场的前台签到员，两个月后成了他档案里最会看人的人：</p>
+  <div class="q">
+    <div class="t">2026-03-22</div>
+    <div class="ta">周杭：星哥 你虽然年龄小 但是很沉稳</div>
+    <div class="ta">周杭：看到了很多值得我学习的好的特质(✧∀✧)</div>
+    <div class="t" style="margin-top:6px">2026-03-25</div>
+    <div class="ta">周杭：星哥是一个很有想法也很优秀的人……有空多和我聊聊</div>
+    <div class="me">我：好呀好呀</div>
+  </div>
+  <p>她分享的一篇文章让他「看过后我立马决定：清明回家！」，并且从 10:28 写到 11:00，写完一篇东西第一时间发给她。四月，两人同听一期节目，他说「有种天涯共此时的感觉」「哈哈，妙不可言」。她验证新设备，随手找他要一组数字，他发去「315312」——信任已经日常到不需要理由。临别时她说「有啥好玩的记得和我分享」，他答：「一定」「!」。</p>
+  <div class="zan">萍水相逢于签到台前，而知人于三月之间。所谓遥远的附近，人亦有之。</div>
+</div><div class="tab"><span class="ord">其四</span><span class="vt">周　杭</span><span class="seal">萍水</span></div></div>
+
+<!-- ================ 其五 白轶帆 ================ -->
+<div class="zhuan rv"><div class="page">
+  <h3>白轶帆传<small>一百个称呼的损友 · 档案 53 条</small></h3>
+  <div class="meta"><span>相识：2024 秋 · 辩论队</span><span>互称：她叫他星星、梁梁、宝、梁爷爷、财神爷、失散多年的哥哥…；他叫她白、老白、宝</span></div>
+  <p>白轶帆是辩论队留下的人：「@Lx 认识的就咱俩留下了」。她对他的称呼库大概是全档案之最——星星、星、梁梁、宝、梁爷爷、哥哥、大款、财神爷、亮星星、梁先生、友友——一段关系的亲近程度，有时候就看对方敢发明多少个名字。</p>
+  <p>她也是最早识破他的人之一。辩论群里她点名：「哲学男孩呢？@Lxchin」，他挣扎：「我不是，别叫我」，她改口：「梁博星男孩」「电四需要你」。她拿三毛那段关于文艺与多愁善感的话说「超级适合描述你」，他当场反问「凭什么」——否认三连，是他被看穿时的标准反应。</p>
+  <div class="q">
+    <div class="t">2024-11-21 · 她心情不好</div>
+    <div class="me">我：爱信不信，但我信了</div>
+    <div class="t" style="margin-top:6px">2024-11-22 · 她说自己一个人打卡</div>
+    <div class="me">我：下次</div>
+    <div class="me">我：驷马</div>
+  </div>
+  <p>「驷马」——一言既出，驷马难追,压缩成两个字。这是他式的承诺格式：字越少，事越真。</p>
+  <div class="zan">称谓百出者，狎也；一言驷马者，重也。狎而能重，损友之上品。</div>
+</div><div class="tab"><span class="ord">其五</span><span class="vt">白轶帆</span><span class="seal">损友</span></div></div>
+
+<!-- ================ 其六 曹一言 ================ -->
+<div class="zhuan rv"><div class="page">
+  <h3>曹一言传<small>梁总与曹总 · 档案 106 条</small></h3>
+  <div class="meta"><span>身份：513 宿舍舍友</span><span>互称：梁总 / 曹总</span><span>高频场景：电费、垃圾袋、跑步、王者</span></div>
+  <p>曹一言的传不需要大事件，它全部由小事构成——这正是舍友这种关系的本质。「梁总帮我交一下电费呗」「梁总回来帮我和马总也带一个垃圾袋呗」「@梁博星 你去图书馆吗」「@梁博星 我们老师画了重点吗？」「曹总今晚去哪」。两个「总」互相支使着最不总裁的事务。</p>
+  <div class="q">
+    <div class="t">日常采样</div>
+    <div class="ta">曹一言：@Lx 现在觉得王者没意思了</div>
+    <div class="ta">曹一言：@Lx 不是哥们就学上了</div>
+    <div class="ta">曹一言：@梁博星 梁总生日快乐[得意][得意][得意]</div>
+    <div class="me">我：哎 曹总 你出去了吗</div>
+    <div class="me">我：没事，我散步呢</div>
+  </div>
+  <p>他把曹一言的稿子发给别人当范本（「这是曹一言写的 / 你借鉴一下」），曹一言记得他的生日和晒被子。四年大学，真正的底噪是这些：晚上操场的散步搭子，帮带的一个垃圾袋。</p>
+  <div class="zan">不与谋大事，而无一日不相与。所谓室友者，人生之背景音也，失之则寂。</div>
+</div><div class="tab"><span class="ord">其六</span><span class="vt">曹一言</span><span class="seal">舍友</span></div></div>
+
+<!-- ================ 其七 李培雷 ================ -->
+<div class="zhuan rv"><div class="page">
+  <h3>李培雷传<small>东门的伞 · 档案 33 条</small></h3>
+  <div class="meta"><span>相识：2024 年夏之前（充电器时代）</span><span>他的称呼：雷子、伞兵（游戏梗）</span><span>高频：跑步、王者、串门</span></div>
+  <p>李培雷的档案开始于一只充电器：「冲电器你先拿着」（2024-07-04，「冲」为原文错字）。此后的关键词是跑步、王者（「上分」「上号」「D5玩不」）、看剧（「我有会员」）和串门。最要紧的一条记在 2024 年 10 月 19 日：李培雷来找他,下着雨——</p>
+  <div class="q">
+    <div class="t">2024-10-19</div>
+    <div class="me">我：快来叫我</div>
+    <div class="t" style="margin-top:2px">（他在东门接应，带着伞——至少在他这边，不会让李培雷淋雨）</div>
+  </div>
+  <p>朋友腿练废了，他给出一整套拉伸方案（「压腿、正侧压、压胯」）；有华为开发者认证的机会，第一时间甩过去链接教对方报名；自己跑步成绩被问起，如实交代「不属于这个层次」「约15分钟」。假期结束前的约定朴素而万能：「开学再去哈哈哈」。</p>
+  <div class="zan">不言情谊而伞在东门。凡言「开学再去」者，皆信来日方长之人也。</div>
+</div><div class="tab"><span class="ord">其七</span><span class="vt">李培雷</span><span class="seal">同游</span></div></div>
+
+<!-- ================ 其八 叼糖闯天下 ================ -->
+<div class="zhuan rv"><div class="page">
+  <h3>叼糖闯天下传<small>老家的线 · 档案 19 条，跨度五年</small></h3>
+  <div class="meta"><span>相识：<b>2021-12-31</b>（好友验证：hello / heyyyyyyy）</span><span>纽带：王者、原神、砍价、梁佳</span></div>
+  <p>2021 年最后一天通过好友验证，一句「hello」对一句「heyyyyyyy」——这是档案里为数不多从高中时代活到现在的关系。五年间的互动清单是一部老友相处说明书：他记得对方的 18 岁生日（「[蛋糕]18岁生日快乐✧٩(ˊωˋ*)و✧」）；开口借账号毫无心理负担（「想借你原神玩玩[旺柴]」）；被拉去砍价，砍出 0.1 也算交差；深夜被叫去 QQ「帮我选歌」，他回「大饱耳福」。</p>
+  <div class="q">
+    <div class="t">2025-09-08 · 对方眼里的他</div>
+    <div class="ta">叼糖闯天下：小时候感觉呆呆的又挺聪明……高中后涉猎广、了解东西多、还看书</div>
+    <div class="t" style="margin-top:6px">2025-07-14 · 他教了个微信玩法</div>
+    <div class="ta">叼糖闯天下：你是天才吗 / 我要拿走了 / 我已经拿走了</div>
+  </div>
+  <p>「小时候感觉呆呆的」——能说出这句话的人，档案里只此一位。2025 年 12 月他张罗饭局：「这周考完六级有啥安排不，要不要搞点饭吃吃，问下梁佳[旺柴]」。老家的线细，但一直没断。</p>
+  <div class="zan">五年十九条，疏而不断。知其呆时模样者，天下无几人矣，此线宜宝之。</div>
+</div><div class="tab"><span class="ord">其八</span><span class="vt">叼糖闯天下</span><span class="seal">故人</span></div></div>
+
+<!-- ================ 其九 迂敬豪 ================ -->
+<div class="zhuan rv"><div class="page">
+  <h3>迂敬豪传<small>最老的朋友 · 完整对话 3,295 条</small></h3>
+  <div class="meta"><span>跨度：<b>2020-08-13 → 2025-01-24</b></span><span>时代关键词：内存条、3G、王者、值曰生</span></div>
+  <p>迂敬豪是档案的地层最深处。2020 年，两个高中生用着「内存条不好」「3G」的手机互相招呼开黑；对话里全是那个年代的错字化石——「值曰」（值日）、「酲了」（醒了）、「口阝可」（拆开的「啊」）。他找迂敬豪要东西从不客套：「作业」「拿来」「手机号。」，句号当语气词。迂敬豪会突然整天「Only in English.」，他也接得住；土味情话二十连发、[烟花][炸弹]刷屏、假自动回复，全程零解释——这段关系的默契深到不需要任何铺垫和收尾。</p>
+  <div class="q">
+    <div class="t">时代样本 · 2020–2021</div>
+    <div class="me">我：还来就王者</div>
+    <div class="me">我：凉风天未，君如何</div>
+    <div class="t" style="margin-top:2px">（化用而非引用——用经典必改字，挪来当下用，这个习惯从这里开始）</div>
+  </div>
+  <p>最后一条记录停在 2025 年 1 月 24 日。没有争执，没有告别，像一台老手机自然耗尽了电。几乎同一时间，陈芷瑞的曲线开始上升——知己完成了一次静默的版本更替。但要说清楚：淡出不是删除。他如今那句「化用经典」的说话习惯、对哥们「单字应答」的语法，全部是迂敬豪时代刻下的——<b>这个人不在对话列表里了，但活在他的语言里</b>。</p>
+  <div class="zan">善终之友如老屋，不复居而梁柱犹在吾身。今其言语间尚有迂氏遗风，是不辞而未别也。</div>
+</div><div class="tab"><span class="ord">其九</span><span class="vt">迂敬豪</span><span class="seal">故人</span></div></div>
+
+<!-- ================ 其十 牛牛（姐） ================ -->
+<div class="zhuan rv"><div class="page">
+  <h3>牛牛传<small>姐 · 档案 57 条，最早一条在 2021-01-22</small></h3>
+  <div class="meta"><span>身份：<b>姐姐</b></span><span>开场白（2021-01-22）：「姐，在不」</span><span>高频：接送、吃饭、行程报备</span></div>
+  <p>牛牛是他姐。这段关系的语言是全档案里最短的：他报行程只用两个字——「坐上了」「到了」「快了」；她的关心也不绕弯——「你干啥呢@Lx」「吃的啥」「天天都是面」「吃些别的」。他回一个字：「行」。偶尔抖机灵：她说他没弄肉菜，他答「鸡蛋不是肉吗」。</p>
+  <div class="q">
+    <div class="t">2024-07-16 · 志愿定音</div>
+    <div class="ta">牛牛：那就西北大学了</div>
+    <div class="me">我：（八秒后回复，档案记录了这个时刻）</div>
+    <div class="t" style="margin-top:6px">日常</div>
+    <div class="ta">牛牛：到时间去接你</div>
+    <div class="ta">牛牛：快到了你打电话 好让吴博来接你</div>
+  </div>
+  <p>人生最大的决定之一——上哪所大学——是在和姐的对话里落锤的：「那就西北大学了」。此后她继续管着他的返校、医保、接送和「不要总吃面」。姐弟之间没有一句抒情，全部的爱意都改写成了后勤。这也解释了他后来对所有人的情感语法：<b>服务是货币，帮忙代替抒情——这门语言，他最早是跟家里学的</b>。</p>
+  <div class="zan">言不过三字，事无一遗漏。世谓大爱无言，姐谓：坐上了，到了，行。</div>
+</div><div class="tab"><span class="ord">其十</span><span class="vt">牛　牛</span><span class="seal">家人</span></div></div>
+
+<!-- ================ 十一 申晋璐 ================ -->
+<div class="zhuan rv"><div class="page">
+  <h3>申晋璐传<small>三条记录的君子之交 · 档案 3 条</small></h3>
+  <div class="meta"><span>纽带：「AI与文化的诉说警示」项目组（与崔兴中同列）</span><span>她的称呼：梁总</span></div>
+  <p>申晋璐在档案里只有三条记录，但三条构成了一个完整的关系样本。2025 年 5 月：「哈哈哈哈哈你回老家 / 了嘛」——寒暄。2026 年 2 月：「梁总 / 你今天下午也来」，他答「来 / 明天回[捂脸] / 玩一玩」——同场。2026 年 4 月：</p>
+  <div class="q">
+    <div class="t">2026-04-21</div>
+    <div class="ta">申晋璐：梁总，给我发一些你平时制作视频的ai网站</div>
+    <div class="ta">申晋璐：他们想要制作长视频，你看看有没有国外的，他们说也可以付费</div>
+  </div>
+  <p>——求助。三条消息横跨一年,每一条都叫他「梁总」，每一条他都接住了。有些关系不需要密度，只需要一个稳定的事实：<b>遇到 AI 的事,她第一个想到他</b>。在他的社交拓扑里，这叫「弱连接的强节点」——平时不响，一响必是正事。</p>
+  <div class="zan">一年三语，语语称总。交淡如水者，非无味也，用时方知其清冽。</div>
+</div><div class="tab"><span class="ord">十一</span><span class="vt">申晋璐</span><span class="seal">同侪</span></div></div>
+
+<!-- ================ 十二 朱梦鹤老师 ================ -->
+<div class="zhuan rv"><div class="page">
+  <h3>朱梦鹤老师传<small>体制内的知遇 · 档案 25 条</small></h3>
+  <div class="meta"><span>身份：青媒指导老师</span><span>他的语域：回执体 + 偶尔破格的[旺柴]</span></div>
+  <p>朱梦鹤老师是他「差序格局」里最微妙的一层：对老师，他说话规整——「收到」「好的好的」，任务件件有回音。但档案里记着一次著名的破格：他做了个排版工具，向老师推销时发的是——「搞不搞 [旺柴]」。对体制内的人发[旺柴]，全档案仅此一处高危操作，而它成功了。</p>
+  <div class="q">
+    <div class="t">2026-04-24 · 最西大推送</div>
+    <div class="ta">朱梦鹤老师：王雪牵头，先分配工作。</div>
+    <div class="ta">朱梦鹤老师：@🌱 今晚就开始做，博星尽量协调编辑同学</div>
+  </div>
+  <p>老师叫他「博星」，把要紧的推送交给他协调；校青马报名，老师指路「你把表写好直接来找王雪签字」。在成年人的组织世界里，这是一种含蓄的背书：名字被省去姓氏地叫出来，活被放心地压过来。他对这段关系的回报方式，一如既往不是言语，是把每一件事办利索。</p>
+  <div class="zan">上下之间有一线，谨守则生分，逾越则轻狂。一枚[旺柴]试探而不失礼者，分寸之艺也。</div>
+</div><div class="tab"><span class="ord">十二</span><span class="vt">朱梦鹤</span><span class="seal">师长</span></div></div>
+
+<div class="fin rv">
+  本卷十二传，引语皆出 灵魂档案.db 与 output/soul_corpus/ 原始语料，错字表情悉仍其旧。<br>
+  记录条数为档案检索计数；赞语与解读为叙者推断，存疑处以原文为准。<br>
+  LX ARCHIVE · 人物卷 · 2026-07-06 整理 ·（另有王雪、李栋、周杭事，详见关系卷、城市卷）
+</div>
+
+</div>
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: 0.06 });
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
